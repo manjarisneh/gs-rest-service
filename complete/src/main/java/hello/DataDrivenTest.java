@@ -36,7 +36,8 @@ public class DataDrivenTest {
 
         Response res=given().header("Content-Type","application/json").
                 body(PayLoad.AddBook()).
-                when().post("/Library/Addbook.php").then().assertThat().statusCode(200).and().log().all().contentType(ContentType.JSON).extract().response();
+                when().post("/Library/Addbook.php").then().assertThat().statusCode(200).and().log().all().
+                contentType(ContentType.JSON).extract().response();
 
         String Str=res.asString();
         JsonPath jp=new JsonPath(Str);

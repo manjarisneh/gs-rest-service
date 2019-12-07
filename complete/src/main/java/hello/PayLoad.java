@@ -5,8 +5,12 @@ public class PayLoad {
     public static String AddBook()
     {
 
-        String payload="{\r\n\r\n\"name\":\"Learn to code Automation with Java\",\r\n\"isbn\":\"yfyfuf\",\r\n\"12347778\":\"227\",\r\n\"author\":\"John foe\"\r\n}\r\n \r\n";
-
+        String payload = "{\n" +
+                "\t\"name\": \"Learn to code Automation with Java\",\n" +
+                "\t\"isbn\": \"qwertyy768\",\n" +
+                "\t\"aisle\": \"1117800\",\n" +
+                "\t\"author\": \"assdgg\"\n" +
+                "}";
         return payload;
 
     }
