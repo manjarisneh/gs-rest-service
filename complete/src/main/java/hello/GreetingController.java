@@ -1,9 +1,8 @@
 package hello;
 
 import java.util.concurrent.atomic.AtomicLong;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class GreetingController {
@@ -16,4 +15,18 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(),
                             String.format(template, name));
     }
+    
+    @GetMapping("/get")
+    public Greeting getGreeting(@RequestParam(value="name", defaultValue="World") String name) {
+        return new Greeting(counter.incrementAndGet(),
+                            String.format(template, name));
+    }
+
+//    @PostMapping("/PostNames")
+//
+//    Names newNames(@RequestßBody Names newNames) {
+//        return repository.save(newNames);
+//    }
+    
+    // request param,request body, path param & header
 }
